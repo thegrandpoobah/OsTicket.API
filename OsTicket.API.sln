@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsTicket.API", "OsTicket.API\OsTicket.API.csproj", "{38EF7ABD-33E8-4F06-9D0B-3DDA3D6166AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsTicket.API.Test", "OsTicket.API.Test\OsTicket.API.Test.csproj", "{793FCF7F-B1EC-4002-8BD6-78ED2C7B3054}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,10 +13,6 @@ Global
 		{38EF7ABD-33E8-4F06-9D0B-3DDA3D6166AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38EF7ABD-33E8-4F06-9D0B-3DDA3D6166AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38EF7ABD-33E8-4F06-9D0B-3DDA3D6166AB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{793FCF7F-B1EC-4002-8BD6-78ED2C7B3054}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{793FCF7F-B1EC-4002-8BD6-78ED2C7B3054}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{793FCF7F-B1EC-4002-8BD6-78ED2C7B3054}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{793FCF7F-B1EC-4002-8BD6-78ED2C7B3054}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>OsTicket.API</id>
+        <version>1.0.0</version>
+        <title>OsTicket.API</title>
+        <authors>Sahab Yazdani</authors>
+        <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>https://github.com/thegrandpoobah/OsTicket.API</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>A wrapper around the OSTicket Ticket REST API.</description>
+        <summary>A wrapper around the OSTicket Ticket REST API.</summary>
+        <copyright>2014</copyright>
+        <dependencies>
+            <group targetFramework=".NETFramework4.0">
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\OsTicket.API.dll" target="lib\net40\OsTicket.API.dll" />
+        <file src="bin\Release\OsTicket.API.XML" target="lib\net40\OsTicket.API.XML" />
+    </files>
+</package>

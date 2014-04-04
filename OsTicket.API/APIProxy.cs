@@ -86,7 +86,7 @@ namespace OsTicket.API
 
             IRestResponse response = client.Execute(request);
 
-            if (response.StatusCode == HttpStatusCode.OK)
+            if (response.StatusCode == HttpStatusCode.Created)
             {
                 return int.Parse(response.Content);
             }

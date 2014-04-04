@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 
@@ -8,7 +9,7 @@ namespace OsTicket.API
 {
     internal class TicketDTO
     {
-        public TicketDTO()
+        private TicketDTO()
         {
             Alert = true;
             AutoRespond = true;
@@ -36,28 +37,40 @@ namespace OsTicket.API
             return response;
         }
 
-        [JsonProperty(PropertyName="email")]
+        [JsonProperty(PropertyName = "email", Required = Required.Always)]
         public string Email { get; set; }
-        [JsonProperty(PropertyName = "name")]
+
+        [JsonProperty(PropertyName = "name", Required = Required.Always)]
         public string Name { get; set; }
-        [JsonProperty(PropertyName = "subject")]
+
+        [JsonProperty(PropertyName = "subject", Required = Required.Always)]
         public string Subject { get; set; }
-        [JsonProperty(PropertyName = "message")]
+
+        [JsonProperty(PropertyName = "message", Required = Required.Always)]
         public string Message { get; set; }
-        [JsonProperty(PropertyName = "alert")]
+
+        [DefaultValue(true)]
+        [JsonProperty(PropertyName = "alert", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool Alert { get; set; }
-        [JsonProperty(PropertyName = "autorespond")]
+
+        [DefaultValue(true)]
+        [JsonProperty(PropertyName = "autorespond", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool AutoRespond { get; set; }
-        //Don't bother sending the IP address
-        //[JsonProperty(PropertyName = "ip")]
-        //public string IP { get; set; }
-        [JsonProperty(PropertyName = "priority")]
-        public int Priority { get; set; }
-        [JsonProperty(PropertyName = "source")]
+
+        [JsonProperty(PropertyName = "ip", NullValueHandling = NullValueHandling.Ignore)]
+        public string IP { get; set; }
+
+        [JsonProperty(PropertyName = "priority", NullValueHandling = NullValueHandling.Ignore)]
+        public int? Priority { get; set; }
+
+        [DefaultValue("API")]
+        [JsonProperty(PropertyName = "source", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Source { get; set; }
-        [JsonProperty(PropertyName = "topicId")]
-        public int TopicId { get; set; }
-        [JsonProperty(PropertyName = "attachments")]
+
+        [JsonProperty(PropertyName = "topicId", NullValueHandling = NullValueHandling.Ignore)]
+        public int? TopicId { get; set; }
+
+        [JsonProperty(PropertyName = "attachments", NullValueHandling = NullValueHandling.Ignore)]
         public List<Dictionary<string, string>> Attachments
         {
             get
